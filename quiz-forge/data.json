@@ -1,0 +1,34 @@
+[
+  {
+    "question": "What year did Disney's Animal Kingdom open to the public?",
+    "choices": ["1995", "1997", "1998"],
+    "answer": "1998"
+  },
+  {
+    "question": "What is the basis of Animal Kingdom's themes and designs?",
+    "choices": [
+      "Galaxy exploration",
+      "Wildlife conservation",
+      "Medieval history"
+    ],
+    "answer": "Wildlife conservation"
+  },
+  {
+    "question": "What is unique about Disney's Animal Kingdom's animal exhibits compared to other Disney parks?",
+    "choices": [
+      "Sharing sections of the park with Disney's Hollywood Studios",
+      "Integrating live animal experiences with traditional theme park elements",
+      "Hosting world-class acrobatic performances"
+    ],
+    "answer": "Integrating live animal experiences with traditional theme park elements"
+  },
+  {
+    "question": "Which of these areas is NOT a part of Disney's Animal Kingdom?",
+    "choices": [
+      "Pandora – The World of Avatar",
+      "DinoLand U.S.A.",
+      "Forgotten Realms"
+    ],
+    "answer": "Forgotten Realms"
+  }
+]
