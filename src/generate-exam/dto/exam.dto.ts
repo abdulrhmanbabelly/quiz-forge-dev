@@ -1,6 +1,4 @@
-import { Type } from 'class-transformer';
 import {
-  IsArray,
   IsEnum,
   IsNotEmpty,
   IsNumber,
@@ -9,12 +7,12 @@ import {
 } from 'class-validator';
 
 // Define the enum for question types
-enum QuestionType {
+export enum QuestionType {
   CLASSICAL = 'CLASSICAL',
   MULTIPLE_CHOICES = 'MULTIPLE_CHOICES',
   TRUE_FALSE = 'TRUE_FALSE',
 }
-class QuestionGroup {
+export class QuestionGroup {
   @IsEnum(QuestionType, {
     message: 'valid type required',
   })
