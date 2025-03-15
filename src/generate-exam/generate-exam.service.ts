@@ -57,7 +57,8 @@ export class GenerateExamService {
 
     const input: string = typeToInput[questionGroup.type];
     if (input) {
-      const response = await ollama.chat({
+      /*
+        const response = await ollama.chat({
         model: 'gemma3:1b',
         messages: [
           {
@@ -67,7 +68,17 @@ export class GenerateExamService {
         ],
       });
 
-      return response.message.content
+      return response.generated_text.content
+        .replaceAll('\n', '')
+        .match(/json.*?```/)?.[0]
+        .replaceAll('`', '')
+        .substring(4);
+       */
+      const response = await this.huggingFaceService.hf.textGeneration({
+        model: 'google/gemma-3-27b-it',
+        inputs: input,
+      });
+      return response.generated_text
         .replaceAll('\n', '')
         .match(/json.*?```/)?.[0]
         .replaceAll('`', '')
@@ -90,3 +101,8 @@ export class GenerateExamService {
     else throw new InternalServerErrorException();
   }
 }
+/* 
+    const response = await this.huggingFaceService.hf.textGeneration({
+      modle: 'google/gemma-3-27b-it',
+      inputs: input,
+    }); */
