@@ -12,7 +12,6 @@ export class GenerateExamController {
   }
   @Post()
   generateExam(@Body(ValidationPipe) examDto: ExamDto) {
-    console.log(examDto);
     return this.generateExamService.generateExam(examDto);
   }
 }
